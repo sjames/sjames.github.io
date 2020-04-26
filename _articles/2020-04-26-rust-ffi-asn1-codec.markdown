@@ -1,9 +1,11 @@
 ---
 layout: single 
 classes: wide
+share: true
 title:  "Rust FFI - Building an ASN1 codec"
 date:   2020-04-26 18:50 +0530
 categories: Rust programming FFI ASN.1
+author_profile: true
 ---
 
 The Rust ecosystem comes with all the tools you need to call into a C Library. This is a great way to use
