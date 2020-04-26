@@ -501,7 +501,6 @@ where
     T: Sized + ASN1GenType,
 {
     /// Create a boxed DDS type from a buffer that is allocated by
-    /// Cyclone DDS.
     pub unsafe fn new_from_asn1codec_allocated_struct(p: *mut T) -> Self {
         if !p.is_null() {
             Self(AllocatedData::<T>::Asn1CodecAllocated(p))
