@@ -1,8 +1,9 @@
 ---
 layout: single 
-title:  "Rust FFI - Building an ASN1 codec - Part1"
-date:   2020-04-19 20:07:00 +0530
-categories: Rust programming FFI
+classes: wide
+title:  "Rust FFI - Building an ASN1 codec"
+date:   2020-04-26 18:50 +0530
+categories: Rust programming FFI ASN.1
 ---
 
 The Rust ecosystem comes with all the tools you need to call into a C Library. This is a great way to use
@@ -22,6 +23,7 @@ The specification I want to encode and decode is IEEE 1609.3. I won't go into th
 Our goal now is to build a Rust library that can encode and decode IEEE 1609.3 UPER packets. You should be able to use the same steps for any ASN.1 specification you may
 have, as long as asn1c can handle it. Let's get started.
 
+## Show me the code!
 You can skip the explanation and jump right to the source code at [https://github.com/sjames/ieee1609dot3codec-sys.git](https://github.com/sjames/ieee1609dot3codec-sys.git).
 
 # Project set up
@@ -32,7 +34,7 @@ $ cargo new ieee1609dot3codec-sys --lib
   Created library `ieee1609dot3codec-sys` package
 ```
 Install asn1c. We could get fancy and download and build asn1c, but that will
-overload this tutorial.  Follow instructions [here](https://github.com/vlm/asn1c/blob/master/INSTALL.m). Ensure that asn1c is in your path.
+overload this tutorial.  Follow instructions [here](https://github.com/vlm/asn1c/blob/master/INSTALL.m). Ensure that asn1c is in your path. I recommend you build the latest version from github instead of getting it from your distro package manager.
 
 ```shell
 $ asn1c  -h
